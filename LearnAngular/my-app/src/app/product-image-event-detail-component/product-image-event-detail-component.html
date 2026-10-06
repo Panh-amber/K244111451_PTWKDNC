@@ -1,0 +1,30 @@
+<p>product-image-event-detail-component works!</p>
+<div class="detail-box">
+    <button (click)="goBack()">Go Back</button>
+    <table>
+        @if (selectedProduct() != null) {
+            <tr>
+                <td>ID:</td>
+                <td>{{ selectedProduct()?.ProductId }}</td>
+            </tr>
+            <tr>
+                <td>Name:</td>
+                <td>{{ selectedProduct()?.ProductName }}</td>
+            </tr>
+            <tr>
+                <td>Price:</td>
+                <td>{{ selectedProduct()?.Price }}</td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <img [src]="selectedProduct()?.Image" [alt]="selectedProduct()?.ProductName" width="150" height="150" />
+                </td>
+            </tr>
+        }
+        @else {
+            <tr>
+                <td colspan="2">Cannot find the product</td>
+            </tr>
+        }
+    </table>
+</div>

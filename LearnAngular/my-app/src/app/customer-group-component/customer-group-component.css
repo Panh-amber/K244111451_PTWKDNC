@@ -1,0 +1,41 @@
+/* Bootstrap (reboot) đặt border-collapse: collapse và border-width: 0 cho td/th
+   -> khôi phục kiểu border="1" (viền kép) giống ảnh mẫu Ex 18, rồi thêm màu cho bảng */
+table {
+    border-collapse: separate !important;
+    border-spacing: 2px;
+    border: 1px solid #9fb3c8 !important;
+    background: #ffffff;
+    color: #243b53;
+}
+table td,
+table th {
+    border: 1px solid #bcccdc !important;
+    padding: 4px 8px;
+    vertical-align: middle;
+}
+
+/* Dòng tiêu đề cột: nền xanh đậm, chữ trắng */
+th {
+    text-align: center;
+    font-weight: bold;
+    background: #334e68;
+    color: #ffffff;
+    border-color: #334e68 !important;
+}
+
+/* Dòng tên nhóm (ô có colspan="5"): nền xanh nhạt, chữ đậm */
+td[colspan="5"] {
+    background: #dceefb;
+    color: #0b4f8a;
+    font-weight: bold;
+}
+
+/* Dòng khách hàng: đổi nền nhẹ khi rê chuột */
+tbody tr:hover td:not([colspan]) {
+    background: #f0f4f8;
+}
+
+/* Cột Age căn phải cho số thẳng hàng */
+td:nth-child(4) {
+    text-align: right;
+}

@@ -1,0 +1,38 @@
+<p>customer-group-component works!</p>
+{{ errMessage() }}
+<table border="1">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>#</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Vòng lặp ngoài: duyệt từng nhóm khách hàng -->
+        @for (g of customerGroups(); track g.CustomerTypeId) {
+            <tr>
+                <td colspan="5">{{ g.CustomerTypeId }} - {{ g.CustomterTypeName }}</td>
+            </tr>
+            <!-- Vòng lặp trong: duyệt từng khách hàng trong nhóm -->
+            @for (c of g.Customers; track c.Id) {
+                <tr>
+                    <td>{{ c.Id }}</td>
+                    <td>{{ c.Name }}</td>
+                    <td>{{ c.Email }}</td>
+                    <td>{{ c.Age }}</td>
+                    <td>
+                        <img [src]="c.Image" [alt]="c.Name" width="140" height="120">
+                    </td>
+                </tr>
+            }
+        }
+        @empty {
+            <tr>
+                <td colspan="5">No customers available.</td>
+            </tr>
+        }
+    </tbody>
+</table>

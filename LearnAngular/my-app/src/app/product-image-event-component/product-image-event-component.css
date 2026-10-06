@@ -1,0 +1,19 @@
+/* Bootstrap (reboot) đặt border-width: 0 cho td/th nên border="1" bị mất
+   -> khai báo lại viền xanh cho bảng VÀ từng ô (giữa các ô), dạng collapse giống ảnh mẫu Ex 13.
+   Dùng !important để Bootstrap không ghi đè được. */
+table {
+    border-collapse: collapse !important;
+    border: 1px solid blue !important;
+}
+table th,
+table td {
+    border: 1px solid blue !important;
+    padding: 4px 6px;
+    text-align: left;
+    vertical-align: middle;
+    font-weight: normal;
+}
+a {
+    color: blue;
+    text-decoration: underline;
+}

@@ -1,0 +1,8 @@
+.detail-box {
+    display: inline-block;
+    border: 1px solid black;
+    padding: 8px;
+}
+td {
+    padding: 2px 16px 2px 0;
+}

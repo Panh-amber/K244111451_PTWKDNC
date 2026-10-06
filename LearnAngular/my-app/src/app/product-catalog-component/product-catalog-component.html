@@ -1,0 +1,47 @@
+<p>product-catalog-component works!</p>
+<table border="1">
+    <tr>
+        <td>Ma Danh Muc</td>
+        <td>Ten Danh Muc</td>
+    </tr>
+    <!-- Vòng lặp ngoài: duyệt từng danh mục -->
+    @for (c of categories; track c.Cateid) {
+        <tr>
+            <td>{{ c.Cateid }}</td>
+            <td>{{ c.CateName }}</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <table border="1">
+                    <tr>
+                        <td>Ma San Pham</td>
+                        <td>Ten San Pham</td>
+                        <td>Gia San Pham</td>
+                        <td>Picture</td>
+                    </tr>
+                    <!-- Vòng lặp trong: duyệt từng sản phẩm của danh mục hiện tại -->
+                    @for (p of c.Products; track p.ProductId) {
+                        <tr>
+                            <td>{{ p.ProductId }}</td>
+                            <td>{{ p.ProductName }}</td>
+                            <td>{{ p.Price }}</td>
+                            <td>
+                                <img [src]="p.Image" [alt]="p.ProductName" width="50" height="50">
+                            </td>
+                        </tr>
+                    }
+                    @empty {
+                        <tr>
+                            <td colspan="4">No products in this category.</td>
+                        </tr>
+                    }
+                </table>
+            </td>
+        </tr>
+    }
+    @empty {
+        <tr>
+            <td colspan="2">No categories available.</td>
+        </tr>
+    }
+</table>

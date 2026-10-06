@@ -1,0 +1,17 @@
+[
+    {
+        "CustomerTypeId": 1, "CustomterTypeName": "VIP",
+        "Customers": [
+            { "Id": "Cus123", "Name": "Obama", "Email": "obama@gmail.com", "Age": 67, "Image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Obama_portrait_crop.jpg/960px-Obama_portrait_crop.jpg?utm_source=vi.wikipedia.org&utm_campaign=index&utm_content=thumbnail" },
+            { "Id": "Cus456", "Name": "Kim Jong Un", "Email": "unun@gmail.com", "Age": 38, "Image": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Kim_Jong-un_at_the_Workers%27_Party_of_Korea_main_building.png?utm_source=vi.wikipedia.org&utm_campaign=index&utm_content=original" },
+            { "Id": "Cus789", "Name": "Putin", "Email": "putin@gmail.com", "Age": 77, "Image": "https://mediabls.mediatech.vn/upload/image/202508/medium/585449_2745d2fc9427deb621fd31e1671a254d.jpg" }
+        ]
+    },
+    {
+        "CustomerTypeId": 2, "CustomterTypeName": "Normal",
+        "Customers": [
+            { "Id": "Cus000", "Name": "Hồ Cẩm Đào", "Email": "hodao@gmail.com", "Age": 16, "Image": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Chinese_President_Hu_Jintao_in_2011.jpg?utm_source=vi.wikipedia.org&utm_campaign=index&utm_content=original" },
+            { "Id": "Cus111", "Name": "Tập Cận Bình", "Email": "binhbinh@gmail.com", "Age": 67, "Image": "https://cdn-images.vtv.vn/562122370168008704/2023/12/11/vnapotaltongbithuchutichtrungquoctapcanbinhsethamcapnhanuocdenvietnam7118465-1702336312428327312784.jpg" }
+        ]
+    }
+]

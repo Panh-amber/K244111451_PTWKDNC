@@ -1,0 +1,13 @@
+/* Bootstrap (reboot) đặt border-collapse: collapse và border-width: 0 cho td
+   -> khôi phục kiểu border="1" mặc định của HTML (viền kép, màu xám) giống ảnh mẫu Ex 14 */
+table {
+    border-collapse: separate;
+    border-spacing: 2px;
+    border: 1px solid gray;
+}
+td {
+    border: 1px solid gray;
+    padding: 2px 4px;
+    min-width: 80px;
+    vertical-align: middle;
+}
